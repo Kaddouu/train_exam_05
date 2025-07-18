@@ -1,14 +1,14 @@
 #pragma once
 #include "ASpell.hpp"
 
-class Fwoosh : public ASpell{
+class Polymorph : public ASpell{
 	public:
-		Fwoosh() : ASpell("Fwoosh", "fwooshed"){};
-		Fwoosh(Fwoosh const &other){
+		Polymorph() : ASpell("Polymorph", "turned into a critter"){};
+		Polymorph(Polymorph const &other){
 			this->name = other.name;
 			this->effects = other.effects;
 		}
-		Fwoosh& operator=(Fwoosh const &other){
+		Polymorph& operator=(Polymorph const &other){
 			if (this != &other)
 			{
 				this->name = other.name;
@@ -16,6 +16,6 @@ class Fwoosh : public ASpell{
 			}
 			return (*this);
 		}
-		Fwoosh* clone() const;
-		~Fwoosh(){};
+		Polymorph* clone() const;
+		~Polymorph(){};
 };

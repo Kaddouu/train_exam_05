@@ -1,14 +1,14 @@
 #pragma once
 #include "ASpell.hpp"
 
-class Fwoosh : public ASpell{
+class Fireball : public ASpell{
 	public:
-		Fwoosh() : ASpell("Fwoosh", "fwooshed"){};
-		Fwoosh(Fwoosh const &other){
+		Fireball() : ASpell("Fireball", "burnt to a crisp"){};
+		Fireball(Fireball const &other){
 			this->name = other.name;
 			this->effects = other.effects;
 		}
-		Fwoosh& operator=(Fwoosh const &other){
+		Fireball& operator=(Fireball const &other){
 			if (this != &other)
 			{
 				this->name = other.name;
@@ -16,6 +16,6 @@ class Fwoosh : public ASpell{
 			}
 			return (*this);
 		}
-		Fwoosh* clone() const;
-		~Fwoosh(){};
+		Fireball* clone() const;
+		~Fireball(){};
 };
